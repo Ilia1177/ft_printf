@@ -6,12 +6,11 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 14:47:39 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/17 20:09:02 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/18 10:22:51 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
-#include "../libft/libft.h"
 
 int	ft_print_unsigned(unsigned int n)
 {

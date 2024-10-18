@@ -6,12 +6,11 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 13:07:17 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/17 20:29:41 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/18 10:22:29 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
-#include "../libft/libft.h"
 
 int	ft_parse(va_list args, const char *s)
 {

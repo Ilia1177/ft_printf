@@ -6,12 +6,12 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:52:17 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/17 21:25:34 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/18 10:22:29 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../include/ft_printf.h"
-#include "../libft/libft.h"
+
 static void	ft_put_address(unsigned long num, char *base)
 {
 	unsigned char 	c;
@@ -23,13 +23,13 @@ static void	ft_put_address(unsigned long num, char *base)
 	c = base[num % baselen];
 	write(1, &c, 1);
 }
-int	get_intlen_address(unsigned long num, int baselen)
+
+static int	get_intlen_address(unsigned long num, int baselen)
 {
 	int			len;
 
 	len = 1;
-	num = n;
-	while (num >= baselen)
+	while (num >= (unsigned long)baselen)
 	{
 		len++;
 		num = num / baselen;
@@ -37,7 +37,7 @@ int	get_intlen_address(unsigned long num, int baselen)
 	return (len);
 }
 
-static int	ft_print_address(unsigned long n)
+int	ft_print_address(unsigned long n)
 {
 	int	len;
 
@@ -45,11 +45,6 @@ static int	ft_print_address(unsigned long n)
 	{
 		write(1, "(nil)", 5);
 		return (5);
-	}
-	if ((long)n == LONG_MIN)
-	{
-		write(1, "0x8000000000000000", 18);
-		return (18);
 	}
 	len = get_intlen_address(n, 16);
 	len += ft_print_str("0x");

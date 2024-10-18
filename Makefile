@@ -6,7 +6,7 @@
 #    By: npolack <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/26 10:27:51 by npolack           #+#    #+#              #
-#    Updated: 2024/10/17 19:27:38 by npolack          ###   ########.fr        #
+#    Updated: 2024/10/18 10:25:35 by npolack          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,6 @@ SRCS	=	./srcs/ft_printf.c\
 
 OBJS		=	$(SRCS:.c=.o)
 
-
 AR 			=	ar -rcs
 
 CC			=	cc 
@@ -39,12 +38,11 @@ RM			=	rm -f
 all				:	$(NAME) 
 
 $(NAME)			:	$(OBJS) $(LIBFT)
-					ar -rs $(NAME) $(OBJS) 
-					$(RM) $(OBJS)
+					cp $(LIBFT) $(NAME)
+					$(AR) $(NAME) $(OBJS)
 
 $(LIBFT)	:
 		make -C libft
-		mv $(LIBFT) $(NAME)
 
 .c.o	 		:
 	$(CC) $(CFLAGS) -c $< -o $@ -g
@@ -52,14 +50,15 @@ $(LIBFT)	:
 main	: $(NAME)
 	cc main.c $(NAME)
 
-run		:
-			cc main.c -lftprintf 
+run		:	main
+			./a.out
 
 clean	:	
 			make clean -C libft
 			$(RM) $(OBJS)
 
 fclean	:	clean
+			make fclean -C libft
 			$(RM) $(NAME)
 
 re		:	fclean all

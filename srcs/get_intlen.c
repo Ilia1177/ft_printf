@@ -1,5 +1,4 @@
 #include "../include/ft_printf.h"
-#include "../libft/libft.h"
 
 int	get_intlen(long long n, int baselen)
 {
