@@ -6,7 +6,7 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 20:06:31 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/18 10:22:51 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/23 11:04:39 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_print_str(char *s)
 {
-	int len;
+	int	len;
 
 	len = 0;
 	if (!s)
@@ -26,4 +26,3 @@ int	ft_print_str(char *s)
 		len += ft_print_char(*s++);
 	return (len);
 }
-

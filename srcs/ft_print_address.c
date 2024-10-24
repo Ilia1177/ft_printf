@@ -6,7 +6,7 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/17 13:52:17 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/18 10:22:29 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/23 11:04:06 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,22 +14,22 @@
 
 static void	ft_put_address(unsigned long num, char *base)
 {
-	unsigned char 	c;
-	int 			baselen;
+	unsigned char	c;
+	unsigned long	baselen;
 
 	baselen = ft_strlen(base);
-	if (num >= (unsigned long)baselen)
+	if (num >= baselen)
 		ft_put_address(num / baselen, base);
 	c = base[num % baselen];
 	write(1, &c, 1);
 }
 
-static int	get_intlen_address(unsigned long num, int baselen)
+static int	get_intlen_address(unsigned long num, unsigned long baselen)
 {
 	int			len;
 
 	len = 1;
-	while (num >= (unsigned long)baselen)
+	while (num >= baselen)
 	{
 		len++;
 		num = num / baselen;

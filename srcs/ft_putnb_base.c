@@ -6,7 +6,7 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 10:36:13 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/18 11:07:49 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/23 11:05:21 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_putnb_base(long long num, char *base)
 {
-	unsigned char 	c;
+	unsigned char	c;
 	long long		baselen;
 
 	if (num == LLONG_MIN)

@@ -6,7 +6,7 @@
 /*   By: npolack <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 11:36:47 by npolack           #+#    #+#             */
-/*   Updated: 2024/10/18 10:56:42 by npolack          ###   ########.fr       */
+/*   Updated: 2024/10/23 11:01:35 by npolack          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 # include <stdint.h>
 # include "../libft/libft.h"
 
-int		ft_printf(const char *, ...);
+int		ft_printf(const char *str, ...);
 int		ft_parse(va_list args, const char *s);
 int		ft_print_str(char *s);
 int		ft_print_dec(int n);
